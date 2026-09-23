@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fallow — helping people live happier, healthier lives one step at a time.">
+<title>Fallow</title>
+<style>
+:root{--ink:#17352f;--muted:#5b6c66;--cream:#f7f3e9;--paper:#fffdf8;--sage:#8cae9b;--leaf:#376b53;--clay:#b56f50;--line:#dfe5df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.65 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:#fffdf8ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.03em;display:flex;gap:10px;align-items:center}.mark{width:38px;height:38px;border-radius:50%;background:var(--leaf);display:inline-block}
+.links{display:flex;gap:25px;font-size:14px;font-weight:700}.links a:hover{color:var(--clay)}
+.btn{display:inline-block;padding:13px 19px;border-radius:999px;font-weight:800;border:1px solid var(--leaf)}.primary{background:var(--leaf);color:#fff}.outline{color:var(--leaf)}
+.hero{padding:90px 0;background:linear-gradient(135deg,#e8f0e8,#f8f3e7 58%,#f2dfd4)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:900;color:var(--leaf)}
+h1,h2{font-family:Georgia,serif;line-height:1.03;letter-spacing:-.04em}h1{font-size:clamp(48px,7vw,82px);margin:14px 0 24px}.hero p{font-size:20px;color:#455d56;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-art{height:420px;border-radius:38px;background:linear-gradient(160deg,#4d765e,#a8bda9 52%,#d49b7f);position:relative;overflow:hidden}.sun{position:absolute;right:50px;top:50px;width:110px;height:110px;border-radius:50%;background:#ead083}.hill,.hill2{position:absolute;border-radius:50%;width:120%;left:-10%}.hill{height:260px;bottom:-125px;background:#294f3e}.hill2{height:220px;bottom:-130px;left:-25%;background:#769b7e}.tree{position:absolute;left:18%;bottom:85px;width:18px;height:160px;background:#684c39;border-radius:10px}.tree:after{content:"";position:absolute;width:115px;height:105px;left:-45px;top:-60px;border-radius:50%;background:#365f49}
+section{padding:85px 0}.cream{background:var(--cream)}.head{max-width:730px;margin-bottom:42px}h2{font-size:clamp(34px,4vw,52px);margin:8px 0 15px}.lead{font-size:18px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}.icon{font-size:28px}.card h3{font-size:21px;margin:8px 0}
+.dimensions{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.dimension{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}.dimension strong{display:block}
+.campus{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.site{min-height:420px;border-radius:30px;background:linear-gradient(135deg,#dce9dc,#f4e2d6);padding:28px;display:flex;align-items:end}.map{width:100%;height:330px;border-radius:22px;background:#8cae9b;position:relative;overflow:hidden}.map span{position:absolute;background:#fffdf8;border-radius:14px;padding:10px;font-weight:800;font-size:12px}.house{left:36%;top:28%;width:32%;height:34%;display:grid;place-items:center}.garden{left:6%;top:14%;width:26%;height:25%;background:#d9ebd2}.orchard{right:6%;top:11%;width:24%;height:21%;background:#e7d6a7}.gym{left:8%;bottom:10%;width:25%;height:20%}.gather{right:8%;bottom:12%;width:28%;height:21%;background:#f0d5c7}.pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.pill{padding:8px 12px;border-radius:999px;background:#e9f1e9;font-size:13px;font-weight:700}
+.retreat{background:var(--ink);color:#fff;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.retreat p{color:#dce7e2}.schedule div{padding:10px 0;border-bottom:1px solid #ffffff2e}.community{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{background:#fff;border:1px solid var(--line);padding:23px;border-radius:18px}.step span{color:var(--clay);font-weight:900;font-size:13px}
+.cta{text-align:center;background:linear-gradient(135deg,#e4eee5,#f6e4d9)}.cta p{max-width:650px;margin:0 auto 25px;color:var(--muted)}input{padding:14px 18px;border:1px solid var(--line);border-radius:999px;font:inherit;width:min(330px,90%)}footer{background:#12302a;color:#dce8e3;padding:45px 0}.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.small{font-size:13px;color:#a9bbb4}
+@media(max-width:800px){.links{display:none}.hero-grid,.campus,.retreat{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.community{grid-template-columns:1fr 1fr}.footergrid{grid-template-columns:1fr}.hero{padding:65px 0}}
+@media(max-width:500px){.community,.dimensions{grid-template-columns:1fr}section{padding:65px 0}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a class="brand" href="#"><span class="mark"></span>Fallow</a>
+<div class="links"><a href="#why">Why TWC</a><a href="#programs">Programs</a><a href="#campus">Campus</a><a href="#retreats">Retreats</a><a href="#community">Community</a></div>
+<a class="btn primary" href="#join">Join Us</a>
+</div></nav>
+
+<section class="hero"><div class="container hero-grid">
+<div><div class="kicker">Atlanta • Community • Wellness • Impact</div>
+<h1>Happier.<br>Healthier.<br>One step at a time.</h1>
+<p>Fallow is building a community where wellness is practical, connected, sustainable, and accessible—bringing together health education, movement, food, nature, healing, and belonging.</p>
+<div class="actions"><a class="btn primary" href="#join">Join the Founding Community</a><a class="btn outline" href="#campus">Explore the Vision</a></div></div>
+<div class="hero-art" aria-label="Illustrated green community landscape"><div class="sun"></div><div class="tree"></div><div class="hill2"></div><div class="hill"></div></div>
+</div></section>
+
+<section id="why"><div class="container"><div class="head"><div class="kicker">A different kind of wellness company</div><h2>We don't just tell people to be healthier. We teach them how.</h2><p class="lead">Health is shaped by what we eat, how we move, how we manage stress, where we live, who supports us, and whether we can access the resources we need.</p></div>
+<div class="grid3"><article class="card"><div class="icon">🌿</div><h3>Rooted in community</h3><p>Build relationships, belonging, and practical support—not just individual habits.</p></article>
+<article class="card"><div class="icon">🫶</div><h3>Whole-person wellness</h3><p>Address the physical, emotional, social, intellectual, occupational, financial, environmental, and spiritual dimensions of wellness.</p></article>
+<article class="card"><div class="icon">🌱</div><h3>Designed for impact</h3><p>A mission-driven business designed to pursue B Corp certification and reinvest in community well-being.</p></article></div></div></section>
+
+<section class="cream" id="programs"><div class="container"><div class="head"><div class="kicker">What we do</div><h2>Learn. Move. Nourish. Heal. Connect.</h2><p class="lead">Programs begin online and expand into the Atlanta flagship campus.</p></div>
+<div class="grid3">
+<article class="card"><div class="icon">🌬️</div><h3>Calm</h3><p>Breathing exercises, mindfulness, grounding, stress education, reflection, and restorative practices.</p></article>
+<article class="card"><div class="icon">🥕</div><h3>Nourish</h3><p>Nutrition education, cooking, gardening, food literacy, fresh produce, herbs, and food-security initiatives.</p></article>
+<article class="card"><div class="icon">🏃🏾</div><h3>Move</h3><p>Strength, yoga, walking, fitness, mobility, and joyful movement for different ages and abilities.</p></article>
+<article class="card"><div class="icon">💚</div><h3>Heal</h3><p>Supportive community experiences, therapy resources, grief and caregiver support, and restorative retreats.</p></article>
+<article class="card"><div class="icon">🧠</div><h3>Learn</h3><p>Evidence-informed education on nutrition, stress, sleep, behavior, epigenetics, and healthy living.</p></article>
+<article class="card"><div class="icon">🤝🏾</div><h3>Navigate</h3><p>Connect people with housing, food, healthcare, mental-health, employment, financial, and community resources.</p></article>
+</div></div></section>
+
+<section><div class="container"><div class="head"><div class="kicker">The eight dimensions</div><h2>Wellness is more than physical health.</h2><p class="lead">Our programs consider the whole person and the environment around them.</p></div>
+<div class="dimensions">
+<div class="dimension"><strong>Physical</strong>Movement, nutrition, sleep, preventive health.</div><div class="dimension"><strong>Emotional</strong>Stress skills, self-awareness, support and healthy coping.</div>
+<div class="dimension"><strong>Social</strong>Connection, belonging, family and community.</div><div class="dimension"><strong>Intellectual</strong>Learning, curiosity, health literacy and skill building.</div>
+<div class="dimension"><strong>Occupational</strong>Purpose, career development and meaningful work.</div><div class="dimension"><strong>Financial</strong>Practical money skills, stability and resource navigation.</div>
+<div class="dimension"><strong>Environmental</strong>Sustainability, gardens, food systems and healthy spaces.</div><div class="dimension"><strong>Spiritual</strong>Reflection, values, meaning, nature and personal practices.</div>
+</div></div></section>
+
+<section class="cream" id="campus"><div class="container campus">
+<div class="site"><div class="map"><span class="garden">Community Garden</span><span class="orchard">Fruit + Herbs</span><span class="house">Flagship Home</span><span class="gym">Movement</span><span class="gather">Gather + Retreat</span></div></div>
+<div><div class="kicker">The Atlanta flagship</div><h2>One acre. One community. A living wellness laboratory.</h2><p class="lead">The existing Atlanta property gives Fallow a place to turn ideas into experiences.</p>
+<div class="pills"><span class="pill">Vegetable gardens</span><span class="pill">Fruit orchard</span><span class="pill">Medicinal herbs</span><span class="pill">Egg-laying chickens</span><span class="pill">Outdoor fitness</span><span class="pill">Meditation garden</span><span class="pill">Community meals</span></div>
+<p>The property includes a 2-bedroom/1-bath lower-level apartment and a 3-bedroom/2-bath upper-level space. Specific public, lodging, food, animal, event, and other uses will be subject to zoning, permitting, safety, accessibility, and professional review.</p></div>
+</div></section>
+
+<section id="retreats"><div class="container"><div class="retreat">
+<div><div class="kicker" style="color:#d8b55b">Signature experience</div><h2>Weekend Reset Retreat</h2><p>A restorative weekend blending movement, breathwork, food, nature, education, reflection, and community.</p><a class="btn primary" href="#join">Join the Retreat Waitlist</a></div>
+<div class="schedule"><div><strong>Friday</strong> — Arrival • farm-to-table dinner • intention circle • gentle yoga</div><div><strong>Saturday</strong> — Sunrise movement • stress workshop • grounding • garden experience • nutrition + epigenetics • reflection</div><div><strong>Sunday</strong> — Breathwork • sustainable habits • 30-day action plan • closing circle</div></div>
+</div></div></section>
+
+<section class="cream" id="community"><div class="container"><div class="head"><div class="kicker">Start online. Grow in real life.</div><h2>A community people can come home to.</h2><p class="lead">Begin with accessible digital education and connection, then gather through garden days, wellness walks, workshops, meals, family events, and retreats.</p></div>
+<div class="community"><div class="step"><span>01 — DISCOVER</span><h3>Follow</h3><p>Practical wellness content people can use immediately.</p></div><div class="step"><span>02 — CONNECT</span><h3>Join</h3><p>A free community, newsletter, challenges, and live conversations.</p></div><div class="step"><span>03 — PARTICIPATE</span><h3>Gather</h3><p>Events, garden workdays, classes, meals, movement, and retreats.</p></div><div class="step"><span>04 — LEAD</span><h3>Grow</h3><p>Ambassadors and community leaders help shape what comes next.</p></div></div></div></section>
+
+<section id="impact"><div class="container"><div class="head"><div class="kicker">Profit with purpose</div><h2>Built to be financially sustainable—and socially accountable.</h2><p class="lead">Revenue from memberships, corporate wellness, retreats, workshops, digital education, products, and future training can support a durable social enterprise. An affiliated nonprofit may later expand access to scholarships, food security, youth leadership, and community support.</p></div>
+<div class="grid3"><article class="card"><h3>For individuals</h3><p>Practical tools, community, education, movement, food skills, and restorative experiences.</p></article><article class="card"><h3>For organizations</h3><p>Wellness education, community engagement, health-equity programming, and corporate wellness experiences.</p></article><article class="card"><h3>For Atlanta</h3><p>A replicable model connecting wellness, food, sustainability, community resilience, and opportunity.</p></article></div></div></section>
+
+<section class="cta" id="join"><div class="container"><div class="kicker">Be part of the beginning</div><h2>One healthy step can start a ripple.</h2><p>Join the founding community for updates on programs, events, the Atlanta campus, retreats, and opportunities to help shape Fallow.</p>
+<form onsubmit="event.preventDefault();document.getElementById('thanks').hidden=false;this.reset()"><input required type="email" placeholder="Your email address" aria-label="Email address"> <button class="btn primary" type="submit">Join the Founding Community</button></form><p id="thanks" hidden><strong>Thank you!</strong> This is a demo form—connect it to your email platform before launch.</p></div></section>
+</main>
+
+<footer><div class="container footergrid"><div><div class="brand" style="color:white"><span class="mark"></span>Fallow</div><p>Happier. Healthier. One Step at a Time.</p><div class="small">Atlanta, Georgia • Mission-driven wellness & community</div></div><div><strong>Explore</strong><p><a href="#programs">Programs</a><a href="#campus">Atlanta Campus</a><a href="#retreats">Retreats</a><a href="#community">Community</a></p></div><div><strong>Connect</strong><p><a href="#join">Founding Community</a><a href="#impact">Our Impact</a><a href="mailto:hello@fallow.com">Email</a></p></div></div></footer>
+</body></html>
